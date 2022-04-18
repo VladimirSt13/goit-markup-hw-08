@@ -1,0 +1,31 @@
+.contacts {
+  font-style: normal;
+
+  &__logo {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: $text-color-white;
+  }
+
+  &__address {
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 9px;
+
+    color: $text-color-white;
+  }
+
+  &__link {
+    margin-bottom: 9px;
+
+    color: rgba(255, 255, 255, 0.6);
+    display: inline-block;
+    margin-bottom: 9px;
+
+    &:hover,
+    &:focus {
+      color: $accent-color-primary;
+    }
+  }
+}

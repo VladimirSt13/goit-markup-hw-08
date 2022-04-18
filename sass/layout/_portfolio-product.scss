@@ -1,0 +1,85 @@
+// Portfolio product
+
+.product {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * #{$portfolio-set-gap});
+  margin-top: calc(-1 * #{$portfolio-set-gap});
+
+  &__item {
+    flex-basis: calc(100% / 3 - #{$portfolio-set-gap});
+    margin-left: $portfolio-set-gap;
+    margin-top: $portfolio-set-gap;
+  }
+
+  &__link {
+    display: block;
+    font-style: normal;
+    text-decoration: none;
+    transition: box-shadow $trans-time $trans-cb;
+    &:hover,
+    &:focus {
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+
+    color: $text-color-title;
+  }
+
+  &__item-content {
+    padding: 20px 24px;
+
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+  }
+
+  &__desc {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.03em;
+
+    color: $text-color-primary;
+  }
+
+  &__thumb {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__overlay-desc {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    padding: 63px 24px;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+
+    color: $text-color-white;
+    background: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition: transform $trans-time $trans-cb;
+
+    .product__link:hover &,
+    .product__link:focus & {
+      transform: translateY(0%);
+    }
+  }
+}

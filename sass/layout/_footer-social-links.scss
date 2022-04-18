@@ -1,0 +1,14 @@
+.footer-social-links {
+  margin-left: 70px;
+
+  &__tumb {
+    background: rgba(255, 255, 255, 0.1);
+    color: $text-color-white;
+    transition: background-color $trans-time $trans-cb;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color-primary;
+    }
+  }
+}

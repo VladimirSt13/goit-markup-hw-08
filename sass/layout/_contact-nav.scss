@@ -1,0 +1,32 @@
+.contact-nav {
+  margin-left: auto;
+  align-items: center;
+  display: flex;
+
+  &__item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+  &__link {
+    display: inline-flex;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    align-items: center;
+
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color $trans-time $trans-cb;
+
+    color: $text-color-primary;
+
+    &:hover,
+    &:focus {
+      color: $accent-color-primary;
+    }
+  }
+}
