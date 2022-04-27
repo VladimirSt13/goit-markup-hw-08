@@ -58,12 +58,18 @@
   box-sizing: border-box;
 
   cursor: pointer;
-}
-.button-close__icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  fill: currentColor;
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    fill: currentColor;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color-primary;
+  }
 }

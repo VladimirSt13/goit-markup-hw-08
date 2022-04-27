@@ -1,15 +1,19 @@
 .feature {
   &__list {
-    display: flex;
+    // display: flex;
   }
 
   &__item {
-    width: calc((100% - 90px) / 4);
-
     &:not(:last-child) {
-      margin-right: 30px;
+      margin-bottom: 30px;
     }
   }
+  //   width: calc((100% - 90px) / 4);
+
+  //   &:not(:last-child) {
+  //     margin-right: 30px;
+  //   }
+  // }
 
   &__icons-wrapper {
     display: flex;
