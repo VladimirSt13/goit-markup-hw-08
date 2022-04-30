@@ -10,24 +10,28 @@
 
   &__container {
     display: flex;
-    justify-content: space-between;
-    padding-top: 10px;
-    padding-bottom: 10px;
     align-items: center;
-  }
 
-  &__menu {
-    display: none;
+    @media screen and(max-width: ($tablet - 1px)) {
+      justify-content: space-between;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+
+    @media screen and(min-width: $tablet) {
+      // padding-top: 21px;
+      // padding-bottom: 21px;
+    }
   }
 }
 
-// @media screen and(min-width: $tablet) {
-//   .page-header__menu {
-//     display: flex;
-//   }
-// }
-
-// .header-nav {
-//   display: flex;
-//   align-items: center;
-// }
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+@media screen and(max-width: ($tablet - 1px )) {
+  .header-nav,
+  .contact-nav {
+    display: none;
+  }
+}

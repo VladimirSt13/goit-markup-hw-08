@@ -32,6 +32,10 @@
   &:focus {
     color: $accent-color-primary;
   }
+
+  @media screen and(min-width: $tablet) {
+    display: none;
+  }
 }
 
 .mob-menu {
@@ -45,7 +49,26 @@
   height: 796px;
   background-color: $text-color-white;
 
+  &__container {
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   &.is-open {
     display: block;
+
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+
+    .header-nav,
+    .contact-nav {
+      display: block;
+    }
+    .social-nav {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 }

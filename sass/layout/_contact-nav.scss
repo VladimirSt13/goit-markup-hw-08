@@ -1,49 +1,73 @@
 .contact-nav {
-  margin-bottom: 64px;
-  // margin-left: auto;
-  // align-items: center;
-  // display: flex;
+  @media screen and(max-width: ($tablet - 1px)) {
+    margin-bottom: 64px;
+  }
+
+  @media screen and(min-width: $tablet) {
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    justify-content: center;
+  }
 
   &__item:not(:last-child) {
-    margin-bottom: 32px;
-    // margin-right: 50px;
+    @media screen and (max-width: ($tablet - 1px)) {
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 50px;
+    }
   }
   &__icon {
-    display: none;
-    // margin-right: 10px;
-    // fill: currentColor;
+    @media screen and(max-width: ($tablet - 1px)) {
+      display: none;
+    }
+
+    display: block;
+    margin-right: 10px;
+    fill: currentColor;
   }
+
   &__item:first-child &__link {
-    color: $accent-color-primary;
-
-    font-size: 40px;
-  }
-  &__item:last-child &__link {
-    color: $text-color-primary;
-
-    font-size: 34px;
+    @media screen and(max-width: ($tablet - 1px)) {
+      font-size: 34px;
+      color: $accent-color-primary;
+    }
   }
 
   &__link {
     font-weight: 500;
+    font-size: 24px;
     line-height: 1.17px;
     letter-spacing: 0.02em;
-    //   // display: inline-flex;
-    //   // padding-top: 32px;
-    //   // padding-bottom: 32px;
-    //   // align-items: center;
+    color: $text-color-primary;
 
-    //   font-weight: 500;
-    //   line-height: 1.14;
-    //   letter-spacing: 0.02em;
+    @media screen and(min-width: $tablet) {
+      display: inline-flex;
+      align-items: center;
 
-    //   transition: color $trans-time $trans-cb;
+      font-size: 12px;
+      line-height: 1.14;
 
-    //   color: $text-color-primary;
+      transition: color $trans-time $trans-cb;
 
-    //   &:hover,
-    //   &:focus {
-    //     color: $accent-color-primary;
-    //   }
+      color: $text-color-primary;
+
+      &:hover,
+      &:focus {
+        color: $accent-color-primary;
+      }
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+      font-size: 14px;
+    }
   }
 }

@@ -1,19 +1,36 @@
 .team {
   background-color: #f5f4fa;
 
+  &__list {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -30px;
+      margin-top: -30px;
+    }
+  }
+
   &__item {
+    @media screen and (min-width: $tablet) {
+      width: calc(100% / 2 - 30px);
+      margin-left: 30px;
+      margin-top: 30px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc(100% / 4 - 30px);
+    }
+
+    @media screen and (max-width: ($tablet - 1px)) {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     background-color: $text-color-white;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
-
-    &:not(:last-child) {
-      // margin-right: 30px;
-    }
   }
 
   &__foto {
@@ -22,12 +39,9 @@
   }
 
   &__item-content {
-    padding: 30px 0px;
+    padding-top: 30px;
+    padding-bottom: 24px;
     // padding: 30px 32px;
-  }
-
-  &__list {
-    // display: flex;
   }
 
   &__title {
@@ -40,8 +54,9 @@
     text-align: center;
 
     color: $text-color-title;
+    @media screen and (min-width: $tablet) {
+    }
   }
-
   &__text {
     margin-top: 0px;
     margin-bottom: 16px;

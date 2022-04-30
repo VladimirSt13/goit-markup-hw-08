@@ -43,28 +43,27 @@ body {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  // padding-top: 94px;
-  // padding-bottom: 94px;
-  // max-width: 1600px;
-  // margin-left: auto;
-  // margin-right: auto;
+
+  @media screen and(min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &-title {
     margin-top: 0;
     margin-bottom: 30px;
 
     font-weight: 700;
-    font-size: 36px;
-    line-height: 1.67;
+    font-size: 28px;
+    line-height: 1.17;
 
     text-align: center;
 
     color: $text-color-title;
 
-    @media screen and(min-width: $tablet) {
-      font-size: 24px;
-      line-height: 1.3;
-      margin-bottom: 30px;
+    @media screen and(min-width: $desktop) {
+      font-size: 36px;
+      margin-bottom: 50px;
     }
   }
 }

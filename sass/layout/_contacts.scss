@@ -1,6 +1,8 @@
 .contacts {
   font-style: normal;
-  margin-bottom: 60px;
+  @media screen and (max-width: ($tablet - 1px)) {
+    margin-bottom: 60px;
+  }
 
   &__address {
     display: inline-block;

@@ -1,10 +1,12 @@
 // Portfolio product
 
 .product {
-  // display: flex;
-  // flex-wrap: wrap;
-  // margin-left: calc(-1 * #{$portfolio-set-gap});
-  // margin-top: calc(-1 * #{$portfolio-set-gap});
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * #{$portfolio-set-gap});
+    margin-top: calc(-1 * #{$portfolio-set-gap});
+  }
 
   &__item {
     max-width: 100%;
@@ -13,9 +15,15 @@
       margin-bottom: 30px;
     }
 
-    // flex-basis: calc(100% / 3 - #{$portfolio-set-gap});
-    // margin-left: $portfolio-set-gap;
-    // margin-top: $portfolio-set-gap;
+    @media screen and (min-width: $tablet) {
+      flex-basis: calc(100% / 2 - #{$portfolio-set-gap});
+      margin-left: $portfolio-set-gap;
+      margin-top: $portfolio-set-gap;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc(100% / 3 - #{$portfolio-set-gap});
+    }
   }
 
   &__link {
