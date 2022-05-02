@@ -19,13 +19,25 @@
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+
+    &__label {
+      margin-bottom: 4px;
+      font-size: 12px;
+      line-height: 1.17;
+      letter-spacing: 0.01em;
+    }
   }
-  &__label {
-    margin-bottom: 4px;
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.01em;
+  @media screen and (max-width: ($tablet - 1px)) {
+    &__label {
+      transition: color $trans-time $trans-cb;
+    }
+
+    &__field:focus-within &__label,
+    &__field:hover &__label {
+      color: $accent-color-primary;
+    }
   }
+
   &__input {
     width: 100%;
     height: $height_input;
@@ -36,7 +48,8 @@
     transition: border-color $trans-time $trans-cb;
 
     &:hover,
-    &:focus {
+    &:focus,
+    &:active {
       border-color: $accent-color-primary;
       cursor: pointer;
       outline: none;
@@ -53,7 +66,8 @@
     transition: fill $trans-time $trans-cb;
   }
 
-  &__input:hover + &__icon {
+  &__input:hover + &__icon,
+  &__field:focus-within &__icon {
     fill: $accent-color-primary;
   }
 
@@ -121,7 +135,7 @@
     &:checked + .modal-form-conditions__icon {
       background-color: $accent-color-primary;
       border-color: transparent;
-      box-shadow: none;
+      // box-shadow: none;
     }
   }
 
@@ -131,7 +145,7 @@
     margin-right: 8.38px;
     border: 2px solid $text-color-title;
     border-radius: 2px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     fill: $text-color-white;
     transition: background-color $trans-time $trans-cb, border-color $trans-time $trans-cb,
       box-shadow $trans-time $trans-cb;
