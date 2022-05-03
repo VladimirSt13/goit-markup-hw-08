@@ -51,6 +51,10 @@
     text-transform: uppercase;
 
     color: $text-color-title;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+      text-align: center;
+    }
   }
 
   &__text {

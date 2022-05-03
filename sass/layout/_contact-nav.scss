@@ -44,6 +44,10 @@
       font-size: 34px;
       color: $accent-color-primary;
     }
+    @media screen and(max-width: 373px) {
+      font-size: 30px;
+      color: $accent-color-primary;
+    }
   }
 
   &__link {

@@ -13,6 +13,10 @@
 
   &__list {
     text-align: center;
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
   }
 
   &__link {
