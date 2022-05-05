@@ -1,15 +1,20 @@
 .contact-nav {
-  @media screen and(max-width: ($tablet - 1px)) {
-    margin-bottom: 64px;
-  }
-
-  @media screen and(min-width: $tablet) {
+  @media screen and (min-width: ($tablet)) {
     margin-left: auto;
   }
+  &__list {
+    @media screen and(max-width: ($tablet - 1px)) {
+      margin-bottom: 64px;
+    }
 
-  @media screen and (min-width: $desktop) {
-    display: flex;
-    align-items: center;
+    @media screen and(min-width: $tablet) {
+      margin-left: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      align-items: center;
+    }
   }
 
   &__item {
