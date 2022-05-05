@@ -1343,25 +1343,6 @@ body {
   }
 }
 
-.modal-form-conditions__checkbox {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
-}
-
-.modal-form-conditions__checkbox:checked + .modal-form-conditions__icon {
-  background-color: #2196f3;
-  border-color: transparent;
-}
-
 .modal-form-conditions__icon {
   width: 16px;
   height: 15px;
@@ -1373,6 +1354,16 @@ body {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-conditions__checkbox:checked + .modal-form-conditions__icon {
+  background-color: #2196f3;
+  border-color: transparent;
+}
+
+.modal-form-conditions__checkbox:focus + .modal-form-conditions__icon,
+.modal-form-conditions__checkbox:hover + .modal-form-conditions__icon {
+  border-color: #2196f3;
 }
 
 @media screen and (min-width: 768px) {

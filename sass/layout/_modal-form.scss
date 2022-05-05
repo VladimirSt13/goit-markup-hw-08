@@ -120,25 +120,6 @@
     }
   }
 
-  &__checkbox {
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    padding: 0;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    margin: -1px;
-
-    &:checked + .modal-form-conditions__icon {
-      background-color: $accent-color-primary;
-      border-color: transparent;
-      // box-shadow: none;
-    }
-  }
-
   &__icon {
     width: 16px;
     height: 15px;
@@ -149,5 +130,17 @@
     fill: $text-color-white;
     transition: background-color $trans-time $trans-cb, border-color $trans-time $trans-cb,
       box-shadow $trans-time $trans-cb;
+  }
+
+  &__checkbox {
+    &:checked + .modal-form-conditions__icon {
+      background-color: $accent-color-primary;
+      border-color: transparent;
+      // box-shadow: none;
+    }
+    &:focus + .modal-form-conditions__icon,
+    &:hover + .modal-form-conditions__icon {
+      border-color: $accent-color-primary;
+    }
   }
 }
