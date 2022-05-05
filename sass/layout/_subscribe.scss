@@ -8,7 +8,15 @@
       display: flex;
     }
   }
-
+  &__label {
+    display: block;
+    @media screen and (max-width: ($desktop - 1px)) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 12px;
+    }
+  }
   &__input {
     width: 100%;
     @media screen and (min-width: $tablet) {
@@ -20,10 +28,8 @@
 
     height: 50px;
     padding: 15px 16px;
-    margin-bottom: 20px;
 
     @media screen and (min-width: $desktop) {
-      margin-right: 12px;
       width: 358px;
     }
 

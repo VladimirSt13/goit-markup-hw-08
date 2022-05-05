@@ -1,13 +1,9 @@
 .contacts {
   font-style: normal;
-  @media screen and (max-width: ($tablet - 1px)) {
-    margin-bottom: 60px;
-  }
 
   &__address {
     display: inline-block;
     margin-top: 0;
-    margin-bottom: 9px;
     color: $text-color-white;
   }
 
@@ -19,12 +15,16 @@
     }
   }
 
-  &__link {
-    margin-bottom: 9px;
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
 
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 8px;
+    }
+  }
+  &__link {
     color: rgba(255, 255, 255, 0.6);
     display: inline-block;
-    margin-bottom: 9px;
 
     text-align: center;
 

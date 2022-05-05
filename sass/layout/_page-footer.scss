@@ -10,7 +10,12 @@
       align-items: baseline;
     }
   }
-  &__logo-adress-social-wrapper {
+  &__logo-address-wrapper {
+    @media screen and (max-width: ($tablet - 1px)) {
+      margin-bottom: 60px;
+    }
+  }
+  &__logo-address-social-wrapper {
     @media screen and(min-width: $tablet) {
       display: flex;
       align-items: baseline;
