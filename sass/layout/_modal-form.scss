@@ -3,11 +3,6 @@
 
   &__base {
     margin-bottom: 20px;
-    width: 370px;
-
-    @media screen and (min-width: $desktop) {
-      width: 448px;
-    }
   }
 
   &__field {
@@ -121,6 +116,7 @@
   }
 
   &__icon {
+    flex-shrink: 0;
     width: 16px;
     height: 15px;
     margin-right: 8.38px;

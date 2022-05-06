@@ -1,22 +1,56 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  padding: 93px 15px;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  transition: opacity $trans-time $trans-cb;
+
+  overflow-y: scroll;
+
+  &--is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .modal {
-  position: absolute;
+  position: relative;
   padding: 40px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  max-width: 450px;
-  max-height: 609px;
+
+  @media screen and (min-width: $mobile) {
+    position: absolute;
+    top: 10px;
+    @media screen and (min-height: 650px) {
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    left: 50%;
+
+    max-width: 450px;
+    transform: translate(-50%, 0) scale(1);
+    transition: transform $trans-time $trans-cb, opacity $trans-time $trans-cb;
+  }
+
+  width: 100%;
 
   @media screen and (min-width: $desktop) {
-    min-height: 581px;
+    min-width: 450px;
+  }
+  @media screen and (min-width: $desktop) {
     min-width: 528px;
+    // min-height: 581px;
   }
 
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  transition: transform $trans-time $trans-cb, opacity $trans-time $trans-cb;
 
   &__title {
     display: block;
@@ -31,12 +65,5 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $text-color-title;
-  }
-
-  .backdrop--is-hidden & {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-    transform: translate(-50%, -50%) scale(0.8);
   }
 }
