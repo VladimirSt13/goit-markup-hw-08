@@ -43,9 +43,7 @@
     display: block;
     margin-bottom: 20px;
 
-    font-weight: 700;
-    line-height: 1.14;
-    // line-height: 1.42;
+    @include font($fw: 700, $lh: 1.14);
 
     text-align: center;
     text-transform: uppercase;

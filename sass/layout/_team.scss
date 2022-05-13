@@ -48,9 +48,8 @@
     margin-top: 0;
     margin-bottom: 10px;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.87;
+    @include font($fw: 500, $fs: 16px, $lh: 1.87);
+
     text-align: center;
 
     color: $text-color-title;
@@ -61,8 +60,8 @@
     margin-top: 0px;
     margin-bottom: 16px;
 
-    font-size: 16px;
-    line-height: 1.87;
+    @include font($fs: 16px, $lh: 1.87);
+
     text-align: center;
   }
 

@@ -1,9 +1,6 @@
 body {
   font-family: $main-fonts;
-  letter-spacing: 0.03em;
-  font-size: 14px;
-  line-height: 1.71;
-
+  @include font($fs: 14px, $lh: 1.71, $ls: 0.03em);
   background-color: $text-color-white;
   color: $text-color-primary;
 }
@@ -58,9 +55,7 @@ body {
     margin-top: 0;
     margin-bottom: 30px;
 
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 1.17;
+    @include font($fw: 700, $fs: 28px, $lh: 1.17);
 
     text-align: center;
 

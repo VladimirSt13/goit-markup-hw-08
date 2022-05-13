@@ -17,10 +17,7 @@
 }
 
 .site-nav__link {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
+  @include font($fw: 500, $fs: 40px, $lh: 1.17, $ls: 0.02em);
 
   @media screen and(min-width: $tablet) {
     display: flex;
@@ -28,9 +25,8 @@
     padding-bottom: 32px;
 
     align-items: center;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+
+    @include font($fs: 14px, $lh: 1.14, $ls: 0.02em);
   }
 
   transition: color $trans-time $trans-cb;

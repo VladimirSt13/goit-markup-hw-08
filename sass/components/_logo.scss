@@ -2,9 +2,8 @@
   display: block;
 
   font-family: $logo-fonts;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 1.17;
+
+  @include font($fw: 700, $fs: 24px, $lh: 1.17);
 
   @media screen and(min-width: $desktop) {
     font-size: 26px;
