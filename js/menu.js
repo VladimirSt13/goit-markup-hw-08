@@ -12,4 +12,12 @@
     mobileMenuRef.classList.toggle('is-open');
     body.classList.toggle('noscroll', !expanded);
   });
+  // Закрываем мобильное меню на более широких экранах
+  // в случае изменения ориентации устройства.
+  window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+    if (!e.matches) return;
+    mobileMenuRef.classList.remove('is-open');
+    menuBtnRef.setAttribute('aria-expanded', false);
+    body.classList.remove('noscroll');
+  });
 })();

@@ -516,6 +516,11 @@ body {
   padding-right: 15px;
   margin: 0 auto;
 }
+@media screen and (max-width: 320px) {
+  .container {
+    min-width: 320px;
+  }
+}
 @media screen and (min-width: 480px) {
   .container {
     width: 480px;
@@ -935,7 +940,7 @@ body {
 }
 @media screen and (max-width: 373px) {
   .contact-nav__item:first-child .contact-nav__link {
-    font-size: 30px;
+    font-size: 26px;
     color: #2196f3;
   }
 }
@@ -1249,8 +1254,6 @@ body {
 }
 @media screen and (min-width: 1200px) {
   .modal-form-conditions__label {
-    font-size: 14px;
-    line-height: 1.71;
     font-size: 14px;
     line-height: 1.71;
   }
